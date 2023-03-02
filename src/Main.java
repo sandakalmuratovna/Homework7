@@ -16,9 +16,9 @@ public class Main {
         int money = 0;
         int month = 1;
         while(money<=2459000){
-            money+=salary;
-            System.out.println("Месяц "+month+", сумма накоплений равна  "+money+" рублей.");
-            month+=1;
+            money += salary;
+            System.out.println("Месяц "+month + ", сумма накоплений равна  "+money+" рублей.");
+            month += 1;
         }
     }
 
@@ -30,10 +30,8 @@ public class Main {
             number += 1;
         }
         System.out.println();
-        number = 10;
-        while(number>=1){
+        for(number=10;number>=1;number--){
             System.out.print(number+" ");
-            number -= 1;
         }
         System.out.println();
     }
@@ -44,9 +42,10 @@ public class Main {
         float birth = 0.017f;
         float death = 0.008f;
         int year = 1;
+        float birthDeath = 1+birth-death;
         while(year<=10){
-            population = population*(1+birth-death);
-            year+=1;
+            population = population*birthDeath;
+            year += 1;
             System.out.println("Год "+year+" численность населения составляет "+population);
         }
     }
@@ -59,8 +58,8 @@ public class Main {
         while(total<=12_000_000){
             total = total*procent;
             System.out.println("Месяц "+month+", сумма накоплений равна  "+total+" рублей.");
-            month+=1;
-            total +=15_000;
+            month += 1;
+            total += 15_000;
         }
 
 
@@ -76,8 +75,8 @@ public class Main {
             if(month%6==0){
                 System.out.println("Месяц "+month+", сумма накоплений равна  "+total+" рублей.");
             }
-            total+=15_000;
-            month+=1;
+            total += 15_000;
+            month += 1;
         }
 
     }
@@ -102,7 +101,7 @@ public class Main {
         int friday = 5;
         while(friday<=31){
             System.out.println("Сегодня пятница, "+friday+"-е число. Необходимо подготовить отчет.");
-            friday+=7;
+            friday += 7;
         }
     }
 
@@ -110,12 +109,12 @@ public class Main {
         System.out.println("Task8");
         int before = 2023-200;
         int after = 2023+100;
-        int current = 79;
+        int current = 0;
         while(current<=after){
+            current += 79;
             if(current>=before){
                 System.out.println(current);
             }
-            current+=79;
         }
     }
 }
